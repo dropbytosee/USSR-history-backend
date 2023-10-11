@@ -1,0 +1,13 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/examp.css' %}">
+  <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class = "history">
+    История АЭС СССР и СНГ
+    {% block content %}{% endblock %}
+</body>
+</html>
