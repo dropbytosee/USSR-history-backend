@@ -1,0 +1,60 @@
+{% extends 'base_page.html' %}
+
+{% load static %}
+
+{% block title %}
+    История электростанций СССР
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="content-wrapper">
+
+        <div class="reactor-details-wrapper">
+
+            <a class="return-link" href="/">Назад</a>
+
+            <div class="left">
+
+                <img src="../media/{{ reactor.image }}">
+
+            </div>
+
+            <div class="right">
+
+                <div class="reactor-info-container">
+
+                    <h2 class="name">{{ reactor.name }}</h2>
+
+                    <br>
+
+                    <h3>Физические характеристики</h3>
+
+                    <span>Максимальная тепловая мощность: {{ reactor.MaximumHeatOutput }} МВт</span>
+                    <span>Электрическая мощность: {{ reactor.ElectricalPower }} МВт</span>
+
+                    <br>
+
+                    <h3>Нейтронные характеристики</h3>
+                    <span>Максимальная плотность потока быстрых нейтронов: {{ reactor.MaximumNeutronFluxDensity }}·10<sup>19</sup>м<sup>-2</sup>с<sup>-1</sup></span>
+                    <span>Средняя энергия нейтронов: {{ reactor.AverageNeutronEnergy }} кэВ</span>
+
+                    <br>
+
+                    <h3>Режим работы реактора</h3>
+                    <span>Продолжительность микрокампании: {{ reactor.MicrocampaniaDuration }} суток</span>
+                    <span>Время между микрокомпаниями: {{ reactor.TimeBetweenMicroCompanies }} суток</span>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+{% endblock %}
