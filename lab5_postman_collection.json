@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "12ca62db-f0d1-4991-93d6-32d871f98d03",
+		"name": "lab5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29630589"
+	},
+	"item": [
+		{
+			"name": "login №1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"root@root.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test4243@mail.com\",\r\n    \"name\": \"test2345\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/register/"
+			},
+			"response": []
+		},
+		{
+			"name": "check",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxMzU4MTgxLCJpYXQiOjE3MDEyNzE3ODEsInVzZXJfaWQiOjEyfQ.0Pifzd8umryClp-IEyPUcEdP70HtJBmbFFVfmtK2Edo",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/api/check/"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxMzU5MDEzLCJpYXQiOjE3MDEyNzI2MTMsInVzZXJfaWQiOjEyfQ.ewZjqcQL96OOyp3phoqiw18GzKYW-_n59OagzE6J3uI",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/api/logout/"
+			},
+			"response": []
+		},
+		{
+			"name": "login №2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@user.com\",\r\n    \"name\": \"user\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/login/"
+			},
+			"response": []
+		}
+	]
+}
